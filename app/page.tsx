@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   const skills = {
     Languages: ["Python", "C", "SQL", "HTML", "CSS", "JavaScript"],
@@ -105,8 +107,15 @@ export default function Home() {
       <section className="min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="max-w-4xl text-center">
           {/* Profile Image Placeholder */}
-          <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-4xl font-bold border-4 border-white/10">
-            SK
+          <div className="relative w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-blue-400/30">
+            <Image
+              src="/images/profile.jpg"
+              alt="Sunny Kumar - Software Developer and QA Engineer"
+              fill
+              className="object-cover"
+              priority
+              sizes="128px"
+           />
             {/* Baad me yahan <Image> tag aayega teri photo ke saath */}
           </div>
 
